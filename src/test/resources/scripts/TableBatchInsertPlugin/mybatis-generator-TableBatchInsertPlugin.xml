@@ -24,7 +24,7 @@
     <!--导入属性配置 -->
     <context id="default" targetRuntime="MyBatis3">
         <!-- 插件 -->
-        <plugin type="com.itfsw.mybatis.generator.plugins.TableSplitPlugin">
+        <plugin type="com.itfsw.mybatis.generator.plugins.TableBatchInsertPlugin">
         </plugin>
 
         <!--jdbc的数据库连接 -->

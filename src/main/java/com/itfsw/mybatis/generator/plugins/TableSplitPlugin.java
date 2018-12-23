@@ -21,6 +21,7 @@ public class TableSplitPlugin extends BasePlugin {
 
     @Override
     public boolean modelBaseRecordClassGenerated(TopLevelClass topLevelClass, IntrospectedTable introspectedTable) {
+        logger.info("****************************测试断点");
         if (!split(introspectedTable)) {
             return true;
         }
@@ -108,6 +109,11 @@ public class TableSplitPlugin extends BasePlugin {
     }
 
     @Override
+    public boolean sqlMapSelectByExampleWithBLOBsElementGenerated(XmlElement element, IntrospectedTable introspectedTable) {
+        return joinIndex(element, introspectedTable);
+    }
+
+    @Override
     public boolean sqlMapSelectByExampleWithoutBLOBsElementGenerated(XmlElement element, IntrospectedTable introspectedTable) {
         return joinIndex(element, introspectedTable);
     }
@@ -118,12 +124,32 @@ public class TableSplitPlugin extends BasePlugin {
     }
 
     @Override
+    public boolean sqlMapSelectAllElementGenerated(XmlElement element, IntrospectedTable introspectedTable) {
+        return joinIndex(element, introspectedTable);
+    }
+
+    @Override
     public boolean sqlMapUpdateByPrimaryKeySelectiveElementGenerated(XmlElement element, IntrospectedTable introspectedTable) {
         return joinIndex(element, introspectedTable);
     }
 
     @Override
     public boolean sqlMapUpdateByPrimaryKeyWithoutBLOBsElementGenerated(XmlElement element, IntrospectedTable introspectedTable) {
+        return joinIndex(element, introspectedTable);
+    }
+
+    @Override
+    public boolean sqlMapUpdateByPrimaryKeyWithBLOBsElementGenerated(XmlElement element, IntrospectedTable introspectedTable) {
+        return joinIndex(element, introspectedTable);
+    }
+
+    @Override
+    public boolean sqlMapUpdateByExampleSelectiveElementGenerated(XmlElement element, IntrospectedTable introspectedTable) {
+        return joinIndex(element, introspectedTable);
+    }
+
+    @Override
+    public boolean sqlMapUpdateByExampleWithoutBLOBsElementGenerated(XmlElement element, IntrospectedTable introspectedTable) {
         return joinIndex(element, introspectedTable);
     }
 
