@@ -220,13 +220,13 @@
         http://www.trinea.cn/dev-tools/upload-java-jar-or-android-aar-to-maven-center-repository/
     -->
     <distributionManagement>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
         <repository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+            <id>maven-releases</id>
+            <url>http://nexus.yuceyi.com/repository/maven-releases/</url>
         </repository>
+        <snapshotRepository>
+            <id>maven-snapshots</id>
+            <url>http://nexus.yuceyi.com/repository/maven-snapshots/</url>
+        </snapshotRepository>
     </distributionManagement>
 </project>
