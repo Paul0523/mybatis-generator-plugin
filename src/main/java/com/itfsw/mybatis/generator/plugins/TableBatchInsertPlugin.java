@@ -129,7 +129,7 @@ public class TableBatchInsertPlugin extends BasePlugin {
         XmlElementGeneratorTools.useGeneratedKeys(batchInsertEle, introspectedTable);
 
         String tableName = split(introspectedTable) ?
-                introspectedTable.getFullyQualifiedTableNameAtRuntime() + "#{index}" : introspectedTable.getFullyQualifiedTableNameAtRuntime();
+                introspectedTable.getFullyQualifiedTableNameAtRuntime() + "_#{index}" : introspectedTable.getFullyQualifiedTableNameAtRuntime();
         batchInsertEle.addElement(new TextElement("insert into " + tableName));
         StringBuilder sb = new StringBuilder("(");
         for (IntrospectedColumn column : ListUtilities.removeIdentityAndGeneratedAlwaysColumns(introspectedTable.getAllColumns())) {
