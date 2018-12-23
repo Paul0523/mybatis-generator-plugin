@@ -21,7 +21,6 @@ public class TableSplitPlugin extends BasePlugin {
 
     @Override
     public boolean modelBaseRecordClassGenerated(TopLevelClass topLevelClass, IntrospectedTable introspectedTable) {
-        logger.info("****************************测试断点");
         if (!split(introspectedTable)) {
             return true;
         }
