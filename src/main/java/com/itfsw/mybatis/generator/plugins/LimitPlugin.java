@@ -44,7 +44,7 @@ public class LimitPlugin extends BasePlugin {
         // 该插件只支持MYSQL
         if ("com.mysql.jdbc.Driver".equalsIgnoreCase(this.getContext().getJdbcConnectionConfiguration().getDriverClass()) == false
                 && "com.mysql.cj.jdbc.Driver".equalsIgnoreCase(this.getContext().getJdbcConnectionConfiguration().getDriverClass()) == false
-                && "org.postgresql.Driver".equalsIgnoreCase(this.getContext().getJdbcConnectionConfiguration().getDriverClass())) {
+                && "org.postgresql.Driver".equalsIgnoreCase(this.getContext().getJdbcConnectionConfiguration().getDriverClass()) == false) {
             warnings.add("itfsw:插件" + this.getClass().getTypeName() + "仅支持MySQL和postgress数据库！");
             return false;
         }
