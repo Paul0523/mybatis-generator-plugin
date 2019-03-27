@@ -221,12 +221,12 @@
     -->
     <distributionManagement>
         <repository>
-            <id>maven-releases</id>
-            <url>http://nexus.yuceyi.com/repository/maven-releases/</url>
+            <id>fangzhipeng</id>
+            <url>http://storage.zhipeng.com:8081/repository/fangzhipeng/</url>
         </repository>
         <snapshotRepository>
-            <id>maven-snapshots</id>
-            <url>http://nexus.yuceyi.com/repository/maven-snapshots/</url>
+            <id>fangzhipeng</id>
+            <url>http://storage.zhipeng.com:8081/repository/fangzhipeng/</url>
         </snapshotRepository>
     </distributionManagement>
 </project>
